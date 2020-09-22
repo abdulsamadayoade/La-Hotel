@@ -301,3 +301,10 @@ header {
 .restaurant button {
     border: 1px solid var(--main-color);
 }
+
+/* SPA SECTION */
+
+.spa {
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
