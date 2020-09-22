@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Josefin Sans Regular";
+    src: url("textfont/JosefinSans-Regular.ttf") format("truetype");
+}
+
+:root {
+    --main-font: "Josefin Sans Regular", sans-serif;
+    --main-color: #455d58;
+    --white-pinkish-color : #FAF2F7;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--main-font);
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    max-height: 3.2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-item {
+    text-transform: uppercase;
+}
+
+.nav-item:not(:last-child) {
+    margin-right: 3.5rem;
+}
+
+.nav-link {
+    border: none;
+    outline: none;
+    border-bottom: .2rem solid transparent;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    letter-spacing: .1rem;
+    padding: 1.5rem 2rem;
+    transition: border-bottom .3s ease;
+}
+
+.nav-link:hover {
+    border-bottom: .2rem solid rgba(69, 93, 88, 0.65)
+}
+
+.btn {
+    display: inline-block;
+}
+
+.book-btn {
+    border: .2rem solid transparent;
+    background-color: var(--main-color);
+    color: var(--white-pinkish-color);
+    padding: 1.5rem 3rem;
+    transition: all .3s ease;
+}
+
+.book-btn:hover {
+    background-color: transparent;
+    border: .2rem solid var(--main-color);
+    color: var(--main-color);
+}
