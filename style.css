@@ -46,7 +46,7 @@ main img {
 }
 
 section {
-    padding: 8rem;
+    padding: 12rem;
 }
 
 a {
@@ -93,6 +93,16 @@ h2 {
     padding-right: 8rem;
 }
 
+.text-box {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.text-box p {
+    font-family: "Josefin Sans Light", sans-serif;
+    margin: 4rem 0;
+}
+
 .btn {
     display: inline-block;
     background: transparent;
@@ -118,6 +128,8 @@ h2 {
 
 .btn-white {
     color: var(--main-color);
+    transition: color .5s;
+    z-index: 1000;
 }
 
 .btn-green::before {
@@ -133,11 +145,29 @@ h2 {
     transition: width .7s;
 }
 
+.btn-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    transform: skewX(25deg);
+    z-index: -1;
+    transition: width .7s;
+}
+
 .btn-green:hover{
     color: var(--main-color);
 }
 
-.btn-green:hover::before {
+.btn-white:hover {
+    color: var(--white-color);
+}
+
+.btn-green:hover::before,
+.btn-white:hover::before {
     width: 120%;
 }
 
@@ -251,15 +281,6 @@ header {
     color: var(--white-color);
 }
 
-.rooms p {
-    font-family: "Josefin Sans Light", sans-serif;
-    margin-bottom: 4rem;
-}
-
-.rooms .text-box {
-    max-width: 40rem;
-}
-
 .rooms h3 {
     font-size: 4rem;
     font-family: var(--tertiary-font);
@@ -267,8 +288,16 @@ header {
 }
 
 .rooms h2 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
+/* RESTAURANT SECTION */
 
+.restaurant h2 {
+    color: var(--main-color);
+    font-size: 4rem;
+}
 
+.restaurant button {
+    border: 1px solid var(--main-color);
+}
