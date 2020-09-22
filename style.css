@@ -11,15 +11,45 @@
     src: url("textfont/JosefinSans-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "SourceSansPro Regular";
+    src: url("textfont/SourceSansPro-Regular.ttf") format("truetype");
+}
+
 :root {
     --main-font: "Josefin Sans Regular", sans-serif;
+    --secondary-font: "SourceSansPro Regular", sans-serif;
     --main-color: #455d58;
     --white-pinkish-color : #FAF2F7;
+    --white-color: #fff;
 }
 
 html {
     font-size: 10px;
     font-family: var(--main-font);
+}
+
+main img {
+    max-width: 100%;
+    width: 100%;
+}
+
+section {
+    padding: 8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 200;
+}
+
+ul {
+    list-style: none;
 }
 
 .container {
@@ -29,13 +59,32 @@ html {
     margin: 0 auto;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row > div {
+    flex: 1;
+}
+
+.padding-right {
+    padding-right: 5rem;
+}
+
 /* HEADER */
+
+header {
+    height: 100vh;
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0;
+    height: 7.5rem;
 }
 
 .logo {
@@ -86,5 +135,88 @@ html {
 .book-btn:hover {
     background-color: transparent;
     border: .2rem solid var(--main-color);
+    color: var(--main-color);
+}
+
+.hero {
+    background-image: linear-gradient(to right bottom, rgba(40, 180, 133, 0.8), rgb(69, 93, 88, 0.5)), url("images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 7.5rem);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+
+.hero__text-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero__text {
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-family: var(--main-font);
+    font-size: 5.4rem;
+    letter-spacing: .2rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+}
+
+.hero__text span {
+    display: block;
+}
+
+.primary-btn {
+    background: transparent;
+    border: .1rem solid var(--white-color);
+    border-radius: .2rem;
+    color: var(--white-color);
+    cursor: pointer;
+    outline: none;
+    padding: 2rem 4rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    position: relative;
+}
+
+.btn-before-white {
+    overflow: hidden;
+}
+
+.btn-before-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 0;
+    height: 100%;
+    background-color: var(--white-color);
+    transform: skewX(25deg);
+    z-index: -1;
+    transition: width .7s;
+}
+
+.btn-before-white:hover {
+    color: var(--main-color);
+}
+
+.btn-before-white:hover::before {
+    width: 120%;
+}
+
+/* INFO SECTION */
+
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+}
+
+.info-text {
+    margin-bottom: 3rem;
     color: var(--main-color);
 }
