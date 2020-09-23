@@ -21,32 +21,30 @@
     src: url("textfont/SourceSansPro-Regular.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: "HerrVonMuellerhoff-Regular";
-    src: url("textfont/HerrVonMuellerhoff-Regular.ttf") format("truetype");
-}
-
 :root {
-    --main-font: "Josefin Sans Regular", sans-serif;
+    --main-font-1: "Josefin Sans Regular", sans-serif;
+    --main-font-2: "Josefin Sans Light", sans-serif;
     --secondary-font: "SourceSansPro Regular", sans-serif;
-    --tertiary-font: "HerrVonMuellerhoff-Regular",sans-serif;
     --main-color: #455d58;
     --white-pinkish-color : #FAF2F7;
     --white-color: #fff;
 }
 
+/* BASIC STYLES */
+
 html {
+    color: var(--white-color);
     font-size: 10px;
-    font-family: var(--main-font);
+    font-family: var(--main-font-1);
 }
 
 main img {
-    max-width: 100%;
+    /* max-width: 100%; */
     width: 100%;
 }
 
 section {
-    padding: 12rem;
+    padding: 8rem 0;
 }
 
 a {
@@ -64,12 +62,42 @@ ul {
 }
 
 h2 {
-    color: var(--white-color);
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-family: var(--secondary-font);
     letter-spacing: .1rem;
     margin: 2rem 0;
     text-transform: uppercase;
+}
+
+/* BASIC & REUSABLE CLASSES */
+
+.heading-text {
+    text-align: center;
+    letter-spacing: .2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.heading-text::after {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: .2rem;
+    background-color: var(--main-color);
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.light-text {
+    font-family: var(--main-font-2);
+}
+
+.text-green {
+    color: var(--main-color);
+}
+
+.text-white {
+    color: var(--white-color);
 }
 
 .container {
@@ -82,11 +110,18 @@ h2 {
 .row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.row > div {
-    flex: 1;
+.col-2 {
+    margin-bottom: 5rem;
+    flex-basis: 50%;
+    min-width: 30rem;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 25rem;
+    margin-bottom: 3rem;
 }
 
 .padding-right {
@@ -99,9 +134,10 @@ h2 {
 }
 
 .text-box p {
-    font-family: "Josefin Sans Light", sans-serif;
     margin: 4rem 0;
 }
+
+/* BUTTONS */
 
 .btn {
     display: inline-block;
@@ -132,19 +168,7 @@ h2 {
     z-index: 1000;
 }
 
-.btn-green::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10%;
-    width: 0;
-    height: 100%;
-    background-color: var(--white-color);
-    transform: skewX(25deg);
-    z-index: -1;
-    transition: width .7s;
-}
-
+.btn-green::before,
 .btn-white::before {
     content: '';
     position: absolute;
@@ -152,10 +176,17 @@ h2 {
     left: -10%;
     width: 0;
     height: 100%;
-    background-color: var(--main-color);
     transform: skewX(25deg);
     z-index: -1;
     transition: width .7s;
+}
+
+.btn-green::before {
+    background-color: var(--white-color);
+}
+
+.btn-white::before {
+    background-color: var(--main-color);
 }
 
 .btn-green:hover{
@@ -190,7 +221,6 @@ header {
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
 }
 
@@ -250,7 +280,6 @@ header {
 .hero__text {
     text-transform: uppercase;
     color: var(--white-color);
-    font-family: var(--main-font);
     font-size: 5.4rem;
     letter-spacing: .2rem;
     line-height: 1.5;
@@ -263,39 +292,26 @@ header {
 
 /* INFO SECTION */
 
+.info-text {
+    margin-bottom: 3rem;
+}
+
 .image-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1.5rem;
 }
 
-.info-text {
-    margin-bottom: 3rem;
-    color: var(--main-color);
-}
-
 /* ROOMS SECTION */
 
 .rooms {
     background-color: var(--main-color);
-    color: var(--white-color);
-}
-
-.rooms h3 {
-    font-size: 4rem;
-    font-family: var(--tertiary-font);
-    letter-spacing: .2rem;
-}
-
-.rooms h2 {
-    font-size: 4rem;
 }
 
 /* RESTAURANT SECTION */
 
-.restaurant h2 {
+.restaurant {
     color: var(--main-color);
-    font-size: 4rem;
 }
 
 .restaurant button {
@@ -306,5 +322,51 @@ header {
 
 .spa {
     background-color: var(--main-color);
-    color: var(--white-color);
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials {
+    color: var(--main-color);
+    padding: 5rem 0;
+}
+
+.fas.fa-quote-left {
+    font-size: 3.4rem;
+}
+
+.slider-box {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.slider-box img {
+    width: 5rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.slider-box p {
+    margin: 3rem 0;
+}
+
+.slider-box h3 {
+    margin: 1.5rem 0;
+    font-size: 1.8rem;
+}
+
+.slider {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.rating {
+    margin: 3rem 0;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    background-color: var(--main-color);
 }
