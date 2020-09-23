@@ -369,4 +369,28 @@ header {
 
 footer {
     background-color: var(--main-color);
+    font-family: var(--main-font-2);
+    padding: 7rem 0;
+}
+
+footer .row {
+    align-items: flex-start;
+}
+
+footer .col-4 {
+    flex: 1;
+}
+
+footer a {
+    color: var(--white-color);
+    font-size: 1.7rem;
+    transition: opacity .5s;
+}
+
+footer a:hover {
+    opacity: .5;
+}
+
+footer li {
+    margin-bottom: 2rem;
 }
