@@ -36,6 +36,7 @@ html {
     color: var(--white-color);
     font-size: 10px;
     font-family: var(--main-font-1);
+    scroll-behavior: smooth;
 }
 
 main img {
@@ -103,7 +104,7 @@ h2 {
 .container {
     width: 100%;
     max-width: 120rem;
-    padding: 0 2rem;
+    padding: 0 2.4rem;
     margin: 0 auto;
 }
 
@@ -381,7 +382,30 @@ header {
 footer {
     background-color: var(--main-color);
     font-family: var(--main-font-2);
-    padding: 7rem 0;
+    padding: 5rem 0 2rem;
+    position: relative;
+}
+
+.back-to-top {
+    text-align: center;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    width: 7rem;
+    height: 7rem;
+    transform: translateX(-50%);
+}
+
+.back-to-top i {
+    display: block;
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 2rem;
+    animation-name: showsUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
 .footer__content h4 {
@@ -406,6 +430,10 @@ footer {
     margin-bottom: 7.5rem;
 }
 
+.footer__content-about h4 {
+    text-align: center;
+}
+
 .footer__content-divider {
     display: flex;
     justify-content: space-between;
@@ -428,11 +456,20 @@ footer {
 .payments {
     width: 100%;
     max-width: 27.3rem;
-    margin: 0 1rem;
 }
 
 .footer__content a:hover {
     opacity: .5;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--white-pinkish-color);
+    padding: .2rem 0;
+    border-bottom: 1px solid var(--white-pinkish-color);
 }
 
 /* MEDIA QUERIES */
@@ -523,7 +560,7 @@ footer {
 
 @media screen and (max-width: 800px) {
     .hero__text {
-        font-size: 5rem;
+        font-size: 4.8rem;
     }
 
     h2 {
@@ -547,5 +584,26 @@ footer {
 
     footer .col-4 {
         margin-bottom: 3rem;
+    }
+
+    .footer__content-about h4 {
+        text-align: left;
+    }
+}
+
+/* ANIMATIONS */
+
+@keyframes showsUp {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-1rem);
     }
 }
