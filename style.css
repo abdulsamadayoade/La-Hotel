@@ -372,6 +372,10 @@ header {
     margin: 3rem 0;
 }
 
+.fa-star {
+    color: #ffba00;
+}
+
 /* FOOTER SECTION */
 
 footer {
