@@ -67,7 +67,7 @@ ul {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-family: var(--secondary-font);
     letter-spacing: .1rem;
     margin: 2rem 0;
@@ -461,11 +461,13 @@ footer {
 
 .rooms-list {
     color: var(--main-color);
+    padding: 0;
 }
 
 .row-2 {
     justify-content: space-between;
-    margin: 3rem auto;
+    margin: 8rem auto 5rem;
+    flex-direction: row !important;
 }
 
 .rooms-list select {
@@ -615,9 +617,6 @@ footer {
         font-size: 4.8rem;
     }
 
-    h2 {
-        font-size: 3rem;
-    }
     .row {
         flex-direction: column;
     }
