@@ -463,6 +463,19 @@ footer {
     color: var(--main-color);
 }
 
+.row-2 {
+    justify-content: space-between;
+    margin: 3rem auto;
+}
+
+.rooms-list select {
+    padding: .6rem;
+    border: .1rem solid var(--main-color);
+    outline: none;
+    background: transparent;
+    font-family: var(--main-font-1);
+}
+
 .rooms-list img {
     width: 100%;
 }
