@@ -7,6 +7,11 @@
 }
 
 @font-face {
+    font-family: "Herr Von Muellerhoff";
+    src: url("textfont/HerrVonMuellerhoff-Regular.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "Josefin Sans Regular";
     src: url("textfont/JosefinSans-Regular.ttf") format("truetype");
 }
@@ -320,6 +325,10 @@ header {
     margin-bottom: 3rem;
 }
 
+.image-group img {
+    width: 100%;
+}
+
 .image-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -524,6 +533,50 @@ footer {
 
 .price span {
     font-size: 3.5rem;
+}
+
+/*                    ABOUT PAGE                   */
+
+.excellent-service {
+    background: url("images/excellent-img.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 65vh;
+}
+
+.excellent-service .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.headlines {
+    padding-top: 5rem;
+}
+
+.sub-headline {
+    font-size: 8.5rem;
+    font-family: "Herr Von Muellerhoff", cursive;
+    color: var(--main-color);
+    font-weight: 100;
+    line-height: .4;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.sub-headline::first-letter {
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headline {
+    font-family: var(--main-font);
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--white-color);
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin-right: -.5rem;
 }
 
 /* MEDIA QUERIES */
