@@ -472,6 +472,7 @@ footer {
 .rooms-list {
     color: var(--main-color);
     padding: 0;
+    padding-bottom: 10rem;
 }
 
 .row-2 {
@@ -603,6 +604,17 @@ footer {
 
 .features p {
     font-family: var(--main-font-2);
+}
+
+.brands {
+    padding: 5rem 0;
+}
+
+.brands .slider-box img {
+    width: 20rem;
+    margin-top: 2rem;
+    border-radius: none;
+    margin: 0 auto;
 }
 
 /* MEDIA QUERIES */
