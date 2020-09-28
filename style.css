@@ -80,6 +80,11 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
 h4 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -186,6 +191,7 @@ h4 {
 }
 
 .btn-white {
+    border: 1px solid var(--main-color);
     color: var(--main-color);
     transition: color .5s;
     z-index: 100;
@@ -347,10 +353,6 @@ header {
 
 .restaurant {
     color: var(--main-color);
-}
-
-.restaurant button {
-    border: 1px solid var(--main-color);
 }
 
 /* SPA SECTION */
@@ -575,11 +577,6 @@ footer {
     margin-bottom: 4rem;
 }
 
-.menu-table h3 {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-}
-
 /*                    ABOUT PAGE                   */
 
 .excellent-service {
@@ -659,6 +656,42 @@ footer {
     margin-top: 2rem;
     border-radius: none;
     margin: 0 auto;
+}
+
+/*                     CONTACT PAGE                   */
+
+.contact {
+    color: var(--main-color);
+}
+
+.contact h3 {
+    font-family: var(--main-font-2);
+}
+
+.contact .col-2:first-child {
+    margin-right: 8rem;
+}
+
+.contact .col-2 div {
+    margin-bottom: 3rem;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,.18);
+    outline: none;
+    padding: 1.7rem 1.5rem;
+    font-family: var(--main-font-2);
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    transition: all .5s;
+}
+
+textarea {
+    resize: none;
+    height: 20rem;
 }
 
 /* MEDIA QUERIES */
@@ -760,6 +793,10 @@ footer {
         flex-direction: column;
     }
 
+    .contact .row {
+        align-items: stretch;
+    }
+
     .rooms-list .row {
         flex-direction: row;
     }
@@ -782,6 +819,10 @@ footer {
 
     .footer__content-about h4 {
         text-align: left;
+    }
+
+    .contact .col-2:first-child {
+        margin-right: 0;
     }
 }
 
