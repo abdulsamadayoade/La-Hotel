@@ -62,8 +62,9 @@ a {
 }
 
 p {
-    font-size: 1.7rem;
-    line-height: 1.7;
+    font-size: 1.9rem;
+    font-family: var(--main-font-2);
+    line-height: 1.5;
     font-weight: 200;
 }
 
@@ -537,6 +538,48 @@ footer {
     font-size: 3.5rem;
 }
 
+/*                    RESTAURANT PAGE                   */
+
+.our-menu {
+    color: var(--main-color);
+    font-family: var(--main-font-2);
+    padding: 0;
+    padding-bottom: 10rem;
+}
+
+.our-menu .row {
+    justify-content: space-between;
+}
+
+.our-menu img {
+    width: 100%;
+}
+
+.menu-header {
+    text-align: center;
+    max-width: 57rem;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.menu-table .col-2 {
+    padding: 2rem 2rem 0 2rem;
+}
+
+.menu-table .col-2:first-child {
+    margin-bottom: 0;
+}
+
+.menu-table .col-2 div {
+    margin-bottom: 4rem;
+}
+
+.menu-table h3 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
 /*                    ABOUT PAGE                   */
 
 .excellent-service {
@@ -579,6 +622,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: .5rem;
     margin-right: -.5rem;
+    margin-bottom: 1rem;
 }
 
 .features .row {
@@ -626,6 +670,10 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
+    p {
+        font-size: 1.7rem;
+    }
+
     .hamburger {
         display: block;
         z-index: 1500;
