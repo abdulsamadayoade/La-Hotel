@@ -323,6 +323,7 @@ header {
 
 .info-text {
     margin-bottom: 3rem;
+    font-family: var(--main-font-2);
 }
 
 .image-group img {
@@ -577,6 +578,31 @@ footer {
     text-transform: uppercase;
     letter-spacing: .5rem;
     margin-right: -.5rem;
+}
+
+.features .row {
+    justify-content: space-between;
+}
+
+.features {
+    background-color: var(--main-color);
+}
+
+.features i {
+    color: #ce8571;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.features h4 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 0;
+}
+
+.features p {
+    font-family: var(--main-font-2);
 }
 
 /* MEDIA QUERIES */
