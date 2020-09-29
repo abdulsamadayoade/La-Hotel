@@ -49,7 +49,6 @@ body {
 }
 
 main img {
-    /* max-width: 100%; */
     width: 100%;
 }
 
@@ -73,11 +72,9 @@ ul {
 }
 
 h2 {
-    font-size: 3.2rem;
-    font-family: var(--secondary-font);
-    letter-spacing: .1rem;
+    font-size: 3.5rem;
     margin: 2rem 0;
-    text-transform: uppercase;
+    line-height: 1.3;
 }
 
 h3 {
@@ -88,17 +85,18 @@ h3 {
 h4 {
     font-size: 1.6rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 3px;
     margin-bottom: 1.6rem;
+}
+
+h2, h4 {
+    text-transform: uppercase;
+    letter-spacing: .2rem;
 }
 
 /* BASIC & REUSABLE CLASSES */
 
 .heading-text {
     text-align: center;
-    letter-spacing: .2rem;
-    margin-bottom: 3rem;
     position: relative;
 }
 
@@ -110,10 +108,6 @@ h4 {
     background-color: var(--main-color);
     margin: 0 auto;
     margin-top: 3rem;
-}
-
-.light-text {
-    font-family: var(--main-font-2);
 }
 
 .text-green {
@@ -246,15 +240,13 @@ header {
 }
 
 .logo {
-    max-height: 3.2rem;
+    font-family: var(--main-font-1);
+    font-size: 2.4rem;
+    color: var(--main-color);
 }
 
 .nav-list {
     display: flex;
-}
-
-.nav-item {
-    text-transform: uppercase;
 }
 
 .nav-item:not(:last-child) {
@@ -265,7 +257,7 @@ header {
     border: none;
     outline: none;
     border-bottom: .2rem solid transparent;
-    text-decoration: none;
+    text-transform: uppercase;
     font-size: 1.2rem;
     color: var(--main-color);
     letter-spacing: .1rem;
@@ -318,7 +310,7 @@ header {
     color: var(--white-color);
     font-size: 5.4rem;
     letter-spacing: .2rem;
-    line-height: 1.5;
+    line-height: 1.4;
     margin-bottom: 5rem;
 }
 
@@ -480,6 +472,7 @@ footer {
 
 .row-2 {
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 8rem auto 5rem;
     flex-direction: row !important;
 }
@@ -492,7 +485,8 @@ footer {
     font-family: var(--main-font-1);
 }
 
-.rooms-list img {
+.rooms-list img,
+.our-menu img {
     width: 100%;
 }
 
@@ -514,6 +508,7 @@ footer {
 
 .room-info h4 {
     letter-spacing: 1px;
+    line-height: 1.4;
 }
 
 .room-info p {
@@ -553,11 +548,8 @@ footer {
     justify-content: space-between;
 }
 
-.our-menu img {
-    width: 100%;
-}
-
-.menu-header {
+.menu-header,
+.spa-header {
     text-align: center;
     max-width: 57rem;
     width: 100%;
@@ -605,17 +597,6 @@ footer {
 .sub-headline::first-letter {
     text-transform: uppercase;
     font-size: 10.3rem;
-}
-
-.headline {
-    font-family: var(--main-font);
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: var(--white-color);
-    text-transform: uppercase;
-    letter-spacing: .5rem;
-    margin-right: -.5rem;
-    margin-bottom: 1rem;
 }
 
 .features .row {
@@ -688,6 +669,37 @@ input, textarea {
 textarea {
     resize: none;
     height: 20rem;
+}
+
+/*                    SPA PAGE                   */
+
+.spa-header {
+    color: var(--main-color);
+    margin-bottom: 8rem;
+}
+
+.spa-header .headline {
+    color: var(--main-color);
+}
+
+.section-spa .col-3 img {
+    width: 100%;
+    transform: scale(1.15);
+}
+
+.section-spa .col-3 {
+    flex: 1;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.section-spa .fa-spa {
+    font-size: 4rem;
+}
+
+.button-container {
+    text-align: center;
+    padding: 10rem 0;
 }
 
 /* MEDIA QUERIES */
@@ -781,6 +793,10 @@ textarea {
 }
 
 @media screen and (max-width: 800px) {
+    h2 {
+        font-size: 3.2rem;
+    }
+
     .hero__text {
         font-size: 4.8rem;
     }
