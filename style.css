@@ -569,10 +569,6 @@ footer {
     padding: 2rem 2rem 0 2rem;
 }
 
-.menu-table .col-2:first-child {
-    margin-bottom: 0;
-}
-
 .menu-table .col-2 div {
     margin-bottom: 4rem;
 }
@@ -791,6 +787,10 @@ textarea {
 
     .row {
         flex-direction: column;
+    }
+
+    .menu-table .col-2:first-child {
+        margin-bottom: 0;
     }
 
     .contact .row {
