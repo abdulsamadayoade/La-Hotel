@@ -572,7 +572,6 @@ footer {
 .our-menu {
     color: var(--main-color);
     font-family: var(--main-font-2);
-    padding: 0;
     padding-bottom: 10rem;
 }
 
@@ -587,6 +586,10 @@ footer {
     width: 100%;
     margin: auto;
     margin-bottom: 5rem;
+}
+
+.menu-header h2 {
+    font-family: var(--main-font-1);
 }
 
 .menu-table .col-2 {
@@ -619,7 +622,7 @@ footer {
 .sub-headline {
     font-size: 8.5rem;
     font-family: "Herr Von Muellerhoff", cursive;
-    color: var(--main-color);
+    color: #55917f;
     font-weight: 100;
     line-height: .4;
     letter-spacing: 2px;
@@ -725,7 +728,8 @@ textarea {
     overflow: hidden;
 }
 
-.section-spa .fa-spa {
+.section-spa .fa-spa,
+.our-menu .fa-utensils {
     font-size: 4rem;
 }
 
