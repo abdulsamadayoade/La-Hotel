@@ -232,6 +232,7 @@ header {
 }
 
 .navbar {
+    background-color: var(--white-pinkish-color   );
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,17 +257,47 @@ header {
 .nav-link {
     border: none;
     outline: none;
-    border-bottom: .2rem solid transparent;
     text-transform: uppercase;
     font-size: 1.2rem;
     color: var(--main-color);
     letter-spacing: .1rem;
-    padding: 1.5rem 2rem;
-    transition: border-bottom .3s ease;
+    padding: 1rem 2rem;
+    position: relative;
 }
 
-.nav-link:hover {
-    border-bottom: .2rem solid rgba(69, 93, 88, 0.65)
+.nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: .2rem;
+    width: 100%;
+    background-color: rgba(69, 93, 88, 0.65);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear; 
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+label {
+    display: none;
+}
+
+label #open,
+label #close {
+    color: var(--main-color);
+    font-size: 2.2rem;
+    line-height: 8rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
 }
 
 .book-btn {
@@ -283,11 +314,8 @@ header {
     color: var(--main-color);
 }
 
-.hamburger {
-    color: var(--main-color);
-    cursor: pointer;
-    font-size: 2.2rem;
-    display: none;
+.book-btn:hover::before {
+    transform: scaleX(0);
 }
 
 .hero {
@@ -653,7 +681,7 @@ footer {
     margin-bottom: 3rem;
 }
 
-input, textarea {
+.contact input, textarea {
     display: block;
     width: 100%;
     background: transparent;
@@ -715,64 +743,46 @@ textarea {
         font-size: 1.7rem;
     }
 
-    .hamburger {
-        display: block;
-        z-index: 1500;
-    }
-
-    .hamburger .hamburger-close {
-        display: none;
-    }
-
-    .hamburger.open {
-        color: var(--white-color);
-    }
-
-    .hamburger.open .hamburger-open {
-        display: none;
-    }
-
-    .hamburger.open .hamburger-close {
+    label {
         display: block;
     }
 
+    label #open {
+        display: block;
+    }
 
     .nav-list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         position: fixed;
-        top: 0;
-        left: 0;
-        background-color: var(--main-color);
+        top: 7.5rem;
+        left: -100%;
+        width: 100%;
         height: 100vh;
-        width: 100vw;
-        z-index: 1000;
-        clip-path: circle(10rem at 90% -10%);
-        -webkit-clip-path: circle(10rem at 80% -20%);
-        transition: all 1s ease-out;
-    }
-
-    .nav-list.open {
-        clip-path: circle(120rem at 90% -10%);
-        -webkit-clip-path: circle(120rem at 80% -20%);
-    }
-
-    .nav-item{
-        margin-bottom: 7rem;
-    }
-
-    .nav-item:not(:last-child) {
-        margin-right: 0;
-    }
-    
-    .nav-link {
-        color: var(--white-pinkish-color);
+        background-color: var(--main-color);
+        flex-direction: column;
+        text-align: center;
+        z-index: 1000000;
         transition: all .5s;
     }
 
-    .nav-link:hover {
-        opacity: .4;
+    #check:checked ~ .nav-list {
+        left: 0;
+    }
+
+    #check:checked ~ label #open {
+        display: none;
+    } 
+
+    #check:checked ~ label #close {
+        display: block;
+    }
+
+    .nav-item {
+        display: block;
+        margin: 4rem 0;
+    }
+
+    .nav-link {
+        color: var(--white-pinkish-color);
     }
 
     .book-btn {
