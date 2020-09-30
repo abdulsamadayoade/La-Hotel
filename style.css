@@ -284,9 +284,7 @@ header {
 }
 
 label {
-    position: relative;
     display: none;
-    z-index: 10000000;
 }
 
 label #open,
