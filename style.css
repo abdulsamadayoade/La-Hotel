@@ -284,7 +284,9 @@ header {
 }
 
 label {
+    position: relative;
     display: none;
+    z-index: 10000000;
 }
 
 label #open,
@@ -294,6 +296,10 @@ label #close {
     line-height: 8rem;
     cursor: pointer;
     display: none;
+}
+
+label #close {
+    color: var(--white-pinkish-color);
 }
 
 #check {
@@ -753,14 +759,15 @@ textarea {
 
     .nav-list {
         position: fixed;
-        top: 7.5rem;
+        top: 0;
         left: -100%;
         width: 100%;
         height: 100vh;
         background-color: var(--main-color);
         flex-direction: column;
+        justify-content: center;
         text-align: center;
-        z-index: 1000000;
+        z-index: 1000;
         transition: all .5s;
     }
 
@@ -774,11 +781,13 @@ textarea {
 
     #check:checked ~ label #close {
         display: block;
+        position: relative;
+        z-index: 100000;
     }
 
     .nav-item {
         display: block;
-        margin: 4rem 0;
+        margin: 2rem 0;
     }
 
     .nav-link {
