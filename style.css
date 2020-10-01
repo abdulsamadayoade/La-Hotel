@@ -747,6 +747,10 @@ textarea {
 }
 
 @media screen and (max-width: 900px) {
+    .nav-item:not(:last-child) {
+        margin-right: 0;
+    }
+
     p {
         font-size: 1.7rem;
     }
@@ -789,7 +793,7 @@ textarea {
 
     .nav-item {
         display: block;
-        margin: 2rem 0;
+        margin: 2.5rem 0;
     }
 
     .nav-link {
