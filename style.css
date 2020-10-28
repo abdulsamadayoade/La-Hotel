@@ -435,7 +435,7 @@ label #close {
 footer {
     background-color: var(--main-color);
     font-family: var(--main-font-2);
-    padding: 8rem 0 5rem;
+    padding: 7rem 0 4rem;
     position: relative;
 }
 
@@ -482,16 +482,6 @@ footer {
 
 .footer__content a:hover {
     opacity: .5;
-}
-
-.copyright {
-    text-align: center;
-}
-
-.copyright a {
-    color: var(--white-pinkish-color);
-    padding: .2rem 0;
-    border-bottom: 1px solid var(--white-pinkish-color);
 }
 
 /*                    ROOMS PAGE                   */
