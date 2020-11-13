@@ -22,10 +22,4 @@ The project contains six pages which are:
 
 6. Contact - This page contains contact details of the hotel manageent which are physical address, email address, phone numbers and input fieldsto send a message.
 
-Fonts Used
-
-1. Josefin Sans
-2. Source Sans
-3. Herr Von Muellerhoff
-
 Live Url = https://abdulsamadayoade.github.io/La-Hotel
